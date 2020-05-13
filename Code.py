@@ -122,20 +122,20 @@ class Usuario:
       print("\033[5;31m"+"Usted es Demasiado Menor para Viajar Solo")
     if(self.longer=="M"):
       print("\033[5;31m"+"Usted es Demasiado Mayor para Viajar Solo")
-    print("\033[0;36m"+"Inserte los datos del Acompañante que viajara con Usted")
+    print("\033[0;36m"+"Inserte los datos del AcompaÃ±ante que viajara con Usted")
     n=str(input("   Nombre:"))
     n=validText(n)
     a=str(input("   Apellido:"))
     a=validText(a)
     acc=n+" "+a
-    print("Acompañante",acc,"asignado Correctamente!")
+    print("AcompaÃ±ante",acc,"asignado Correctamente!")
     print("\033[5;33m"+"\n     (Presiona Enter para Continuar)")
     asd=input("")
     self.acc=acc
-  def AñadirFondos(self,cantAñadir):
-    self.cantAñadir=cantAñadir
-    self.fondos=self.fondos+self.cantAñadir
-    print("\033[0;36m"+"Fondos Añadidos Correctamente!")
+  def AÃ±adirFondos(self,cantAÃ±adir):
+    self.cantAÃ±adir=cantAÃ±adir
+    self.fondos=self.fondos+self.cantAÃ±adir
+    print("\033[0;36m"+"Fondos AÃ±adidos Correctamente!")
     print("\033[5;33m"+"\n     (Presiona Enter para Continuar)")
     asd=input("")
   def VerUsuario(self):
@@ -143,7 +143,7 @@ class Usuario:
     print("   Nombre del Usuario:",self.name,"",self.adress)
     if(self.edd==True):
       if(self.longer=="M" or self.longer=="m"):
-        print("   Nombre del Acompañante:",self.acc)
+        print("   Nombre del AcompaÃ±ante:",self.acc)
     print("   Numero de Identificacion:",self.IDE)
     print("   Fondos en la Cuenta: $",self.fondos)
     print("\033[5;33m"+"\n     (Presiona Enter para Continuar)")
@@ -275,7 +275,7 @@ def main():
   while(True):
     print("\033[0;36m"+"Elige una Opcion para Continuar:\n")
     print("   1) Ver mi Usuario")
-    print("   2) Añadir Dinero a mi Cuenta")
+    print("   2) AÃ±adir Dinero a mi Cuenta")
     print("   3) Consultar Rutas")
     print("   4) Consultar Estaciones")
     print("   5) Realizar Viaje ")
@@ -290,9 +290,9 @@ def main():
       user.VerUsuario()
     #Opcion 2 - Ingresar Dinero
     elif(opt==2):
-      dinero=input("\033[0;36m"+"¿Cuanto Dinero quieres Ingresar?")
+      dinero=input("\033[0;36m"+"Â¿Cuanto Dinero quieres Ingresar?")
       dinero=int(validReal(dinero))
-      user.AñadirFondos(dinero)
+      user.AÃ±adirFondos(dinero)
     #Opcion 3 - Ver Rutas
     elif(opt==3):
       user.VerRutas()
